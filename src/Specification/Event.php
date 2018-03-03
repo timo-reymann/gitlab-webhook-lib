@@ -69,9 +69,9 @@ abstract class Event
                 array_key_exists('url', $data) ? $data['url'] : null,
                 $data['description'],
                 $data['homepage'],
-                $data['git_http_url'],
-                $data['git_ssh_url'],
-                $data['visibility_level']
+                array_key_exists('git_http_url', $data) ? $data['git_http_url'] : null,
+                array_key_exists('git_ssh_url', $data) ? $data['git_ssh_url'] : null,
+                array_key_exists('visibility_level', $data) ? $data['visibility_level'] : null
             );
         }
 
@@ -83,24 +83,24 @@ abstract class Event
      */
     public function getProject()
     {
-        if ($this->project == null) {
+        if ($this->project == null && array_key_exists('project', $this->data)) {
             $data = $this->data["project"];
             $this->project = new Project(
                 $data['id'],
                 $data['name'],
                 $data['description'],
                 $data['web_url'],
-                strval($data['avatar_url']),
+                $data['avatar_url'],
                 $data['git_ssh_url'],
                 $data['git_http_url'],
                 $data['namespace'],
                 $data['visibility_level'],
                 $data['path_with_namespace'],
                 $data['default_branch'],
-                $data['homepage'],
-                $data['url'],
-                $data['ssh_url'],
-                $data['http_url']
+                array_key_exists('homepage', $data) ? $data['homepage'] : null,
+                array_key_exists('url', $data) ? $data['url'] : null,
+                array_key_exists('ssh_url', $data) ? $data['ssh_url'] : null,
+                array_key_exists('http_url', $data) ? $data['http_url'] : null
             );
         }
 

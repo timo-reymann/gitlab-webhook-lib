@@ -30,9 +30,9 @@ trait CommitTrait
             $this->commit = new Commit(
                 $c['id'],
                 $c['message'],
-                $c['timestamp'],
-                $c['url'],
-                new Author($c['author']['name'], $c['author']['email']),
+                array_key_exists('timestamp', $c) ? $c['timestamp'] : null,
+                array_key_exists('url', $c) ? $c['url'] : null,
+                array_key_exists('author', $c)  ? new Author($c['author']['name'], $c['author']['email']) : null,
                 [],
                 [],
                 []

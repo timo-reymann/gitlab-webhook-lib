@@ -26,7 +26,8 @@ trait UserTrait
             $this->user = new User(
                 $u['name'],
                 array_key_exists('username', $u) ? $u['username'] : null,
-                array_key_exists('avatar_url', $u) ? $u['avatar_url'] : null
+                array_key_exists('avatar_url', $u) ? $u['avatar_url'] : null,
+                array_key_exists('email', $u) ? $u['email'] : null
             );
         }
 

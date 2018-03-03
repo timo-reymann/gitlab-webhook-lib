@@ -25,17 +25,33 @@ class User
     private $avatar_url;
 
     /**
+     * @var string
+     */
+    private $email;
+
+    /**
      * User constructor.
      * @param string $name
      * @param string $username
      * @param string $avatar_url
+     * @param string $email
      */
-    public function __construct($name, $username, $avatar_url)
+    public function __construct($name, $username, $avatar_url, $email)
     {
         $this->name = $name;
         $this->username = $username;
         $this->avatar_url = $avatar_url;
+        $this->email = $email;
     }
+
+    /**
+     * @return string
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
 
     /**
      * @return string

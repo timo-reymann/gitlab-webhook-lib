@@ -187,7 +187,7 @@ class Build
     }
 
     /**
-     * @return mixed
+     * @return File
      */
     public function getArtifactsfile()
     {

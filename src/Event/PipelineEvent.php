@@ -40,11 +40,11 @@ class PipelineEvent extends Event
                     $b['name'],
                     $b['status'],
                     $b['created_at'],
-                    strval($b['started_at']),
+                    $b['started_at'],
                     $b['finished_at'],
                     $b['when'],
                     $b['manual'],
-                    new User($b['user']['name'], $b['user']['username'], (array_key_exists('avatar_url', $b)) ? $b['avatar_url'] : null),
+                    new User($b['user']['name'], $b['user']['username'], (array_key_exists('avatar_url', $b['user'])) ? $b['user']['avatar_url'] : null,null),
                     $b['runner'],
                     new File($b['artifacts_file']['filename'], $b['artifacts_file']['size'])
                 );

@@ -27,6 +27,14 @@ class BuildEvent extends Event
     /**
      * @return string
      */
+    public function getBuildStage()
+    {
+        return $this->getRootAttribute("build_stage");
+    }
+
+    /**
+     * @return string
+     */
     public function getBuildName()
     {
         return $this->getRootAttribute("build_name");

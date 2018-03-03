@@ -26,7 +26,8 @@ trait AssigneeTrait
             $this->assignee = new User(
                 $a['name'],
                 $a['username'],
-                $a['avatar_url']
+                $a['avatar_url'],
+               array_key_exists('email',$a) ? $a['email'] : null
             );
         }
 
