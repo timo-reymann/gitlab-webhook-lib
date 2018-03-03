@@ -68,4 +68,11 @@ class PushEvent extends Event
     {
         return $this->getRootAttribute("user_email");
     }
+
+    /**
+     * @return string
+     */
+    public function getUserRealName() {
+        return $this->getRootAttribute("user_name");
+    }
 }
