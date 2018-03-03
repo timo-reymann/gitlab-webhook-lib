@@ -1,5 +1,5 @@
 {
-  "version": "0.0.1",
+  "version": "1.0.0",
   "name": "timo-reymann/gitlab-webhook-lib",
   "description": "Simple PHP library for working with gitlab webhooks",
   "minimum-stability": "stable",
