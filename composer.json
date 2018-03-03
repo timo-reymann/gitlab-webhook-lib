@@ -2,7 +2,7 @@
   "version": "0.0.1",
   "name": "timo-reymann/gitlab-webhook-lib",
   "description": "Simple PHP library for working with gitlab webhooks",
-  "minimum-stability": "beta",
+  "minimum-stability": "stable",
   "license": "MIT",
   "authors": [
     {
