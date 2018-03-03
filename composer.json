@@ -3,7 +3,7 @@
   "name": "timo-reymann/gitlab-webhook-lib",
   "description": "Simple PHP library for working with gitlab webhooks",
   "license": "MIT",
-  "type": "library"
+  "type": "library",
   "authors": [
     {
       "name": "Timo Reymann",
