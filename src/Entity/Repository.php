@@ -54,7 +54,7 @@ class Repository
      * @param string $git_ssh_url
      * @param string $visibility_level
      */
-    public function __construct(string $name, string $url, string $description, string $homepage, string $git_http_url, string $git_ssh_url, string $visibility_level)
+    public function __construct($name, $url, $description, $homepage, $git_http_url, $git_ssh_url, $visibility_level)
     {
         $this->name = $name;
         $this->url = $url;
@@ -69,7 +69,7 @@ class Repository
     /**
      * @return string
      */
-    public function getName(): string
+    public function getName()
     {
         return $this->name;
     }
@@ -77,7 +77,7 @@ class Repository
     /**
      * @return string
      */
-    public function getUrl(): string
+    public function getUrl()
     {
         return $this->url;
     }
@@ -85,7 +85,7 @@ class Repository
     /**
      * @return string
      */
-    public function getDescription(): string
+    public function getDescription()
     {
         return $this->description;
     }
@@ -93,7 +93,7 @@ class Repository
     /**
      * @return string
      */
-    public function getHomepage(): string
+    public function getHomepage()
     {
         return $this->homepage;
     }
@@ -101,7 +101,7 @@ class Repository
     /**
      * @return string
      */
-    public function getGitHttpUrl(): string
+    public function getGitHttpUrl()
     {
         return $this->git_http_url;
     }
@@ -109,7 +109,7 @@ class Repository
     /**
      * @return string
      */
-    public function getGitSshUrl(): string
+    public function getGitSshUrl()
     {
         return $this->git_ssh_url;
     }
@@ -117,7 +117,7 @@ class Repository
     /**
      * @return string
      */
-    public function getVisibilityLevel(): string
+    public function getVisibilityLevel()
     {
         return $this->visibility_level;
     }

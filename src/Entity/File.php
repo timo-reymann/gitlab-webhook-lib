@@ -24,7 +24,7 @@ class File
      * @param null|string $filename
      * @param null|string $size
      */
-    public function __construct(?string $filename, ?string $size)
+    public function __construct($filename, $size)
     {
         $this->filename = $filename;
         $this->size = $size;
@@ -33,7 +33,7 @@ class File
     /**
      * @return null|string
      */
-    public function getFilename(): ?string
+    public function getFilename()
     {
         return $this->filename;
     }
@@ -41,7 +41,7 @@ class File
     /**
      * @return null|string
      */
-    public function getSize(): ?string
+    public function getSize()
     {
         return $this->size;
     }

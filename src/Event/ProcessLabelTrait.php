@@ -7,6 +7,8 @@
 namespace TimoReymann\GitlabWebhookLibrary\Event;
 
 
+use TimoReymann\GitlabWebhookLibrary\Entity\Label;
+
 trait ProcessLabelTrait
 {
     private function processLabels($labels)

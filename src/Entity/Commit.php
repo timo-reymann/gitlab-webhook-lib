@@ -60,7 +60,7 @@ class Commit
      * @param string[] $modified
      * @param string[] $removed
      */
-    public function __construct(string $id, string $message, string $timestamp, string $url, Author $author, array $added, array $modified, array $removed)
+    public function __construct($id, $message, $timestamp, $url, $author, $added, $modified, $removed)
     {
         $this->id = $id;
         $this->message = $message;
@@ -75,7 +75,7 @@ class Commit
     /**
      * @return string
      */
-    public function getId(): string
+    public function getId()
     {
         return $this->id;
     }
@@ -83,7 +83,7 @@ class Commit
     /**
      * @return string
      */
-    public function getMessage(): string
+    public function getMessage()
     {
         return $this->message;
     }
@@ -91,7 +91,7 @@ class Commit
     /**
      * @return string
      */
-    public function getTimestamp(): string
+    public function getTimestamp()
     {
         return $this->timestamp;
     }
@@ -99,7 +99,7 @@ class Commit
     /**
      * @return string
      */
-    public function getUrl(): string
+    public function getUrl()
     {
         return $this->url;
     }
@@ -107,7 +107,7 @@ class Commit
     /**
      * @return Author
      */
-    public function getAuthor(): Author
+    public function getAuthor()
     {
         return $this->author;
     }
@@ -115,7 +115,7 @@ class Commit
     /**
      * @return string[]
      */
-    public function getAdded(): array
+    public function getAdded()
     {
         return $this->added;
     }
@@ -123,7 +123,7 @@ class Commit
     /**
      * @return string[]
      */
-    public function getModified(): array
+    public function getModified()
     {
         return $this->modified;
     }
@@ -131,7 +131,7 @@ class Commit
     /**
      * @return string[]
      */
-    public function getRemoved(): array
+    public function getRemoved()
     {
         return $this->removed;
     }

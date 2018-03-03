@@ -27,6 +27,7 @@ class EventType implements HeaderProcessor
      * @param bool $failSilent Verify via boolean (true) or via exception (false)
      * @return bool|void Based on failSilent method returns void or an boolean of the result
      * @throws EventTypeMissingException
+     *
      */
     public function verify($failSilent = false)
     {
@@ -40,13 +41,13 @@ class EventType implements HeaderProcessor
     }
 
     /**
-     * @param $headerValue
+     * @param $inputContent
      * @return BuildEvent|CommentEvent|IssueEvent|MergeRequestEvent|PipelineEvent|PushEvent|TagEvent|WikiEvent
      * @throws EventTypeInvalidException
      */
-    public function getEventDataFromBody()
+    public function getEventDataFromBody($inputContent)
     {
-        $data = json_decode(file_get_contents('php://input'), true);
+        $data = json_decode($inputContent, true);
         $headerValue = $this->getHeaderValue();
 
         switch ($headerValue) {

@@ -102,7 +102,7 @@ class Project
      * @param string $ssh_url
      * @param string $http_url
      */
-    public function __construct(int $id, string $name, string $description, string $web_url, string $avatar_url, string $git_ssh_url, string $git_http_url, string $namespace, int $visibility_level, string $path_with_namespace, string $default_branch, string $homepage, string $url, string $ssh_url, string $http_url)
+    public function __construct($id, $name, $description, $web_url, $avatar_url, $git_ssh_url, $git_http_url, $namespace, $visibility_level, $path_with_namespace, $default_branch, $homepage, $url, $ssh_url, $http_url)
     {
         $this->id = $id;
         $this->name = $name;
@@ -124,7 +124,7 @@ class Project
     /**
      * @return int
      */
-    public function getId(): int
+    public function getId()
     {
         return $this->id;
     }
@@ -132,7 +132,7 @@ class Project
     /**
      * @return string
      */
-    public function getName(): string
+    public function getName()
     {
         return $this->name;
     }
@@ -140,7 +140,7 @@ class Project
     /**
      * @return string
      */
-    public function getDescription(): string
+    public function getDescription()
     {
         return $this->description;
     }
@@ -148,7 +148,7 @@ class Project
     /**
      * @return string
      */
-    public function getWebUrl(): string
+    public function getWebUrl()
     {
         return $this->web_url;
     }
@@ -156,7 +156,7 @@ class Project
     /**
      * @return string
      */
-    public function getAvatarUrl(): string
+    public function getAvatarUrl()
     {
         return $this->avatar_url;
     }
@@ -164,7 +164,7 @@ class Project
     /**
      * @return string
      */
-    public function getGitSshUrl(): string
+    public function getGitSshUrl()
     {
         return $this->git_ssh_url;
     }
@@ -172,7 +172,7 @@ class Project
     /**
      * @return string
      */
-    public function getGitHttpUrl(): string
+    public function getGitHttpUrl()
     {
         return $this->git_http_url;
     }
@@ -180,7 +180,7 @@ class Project
     /**
      * @return string
      */
-    public function getNamespace(): string
+    public function getNamespace()
     {
         return $this->namespace;
     }
@@ -188,7 +188,7 @@ class Project
     /**
      * @return int
      */
-    public function getVisibilityLevel(): int
+    public function getVisibilityLevel()
     {
         return $this->visibility_level;
     }
@@ -196,7 +196,7 @@ class Project
     /**
      * @return string
      */
-    public function getPathWithNamespace(): string
+    public function getPathWithNamespace()
     {
         return $this->path_with_namespace;
     }
@@ -204,7 +204,7 @@ class Project
     /**
      * @return string
      */
-    public function getDefaultBranch(): string
+    public function getDefaultBranch()
     {
         return $this->default_branch;
     }
@@ -212,7 +212,7 @@ class Project
     /**
      * @return string
      */
-    public function getHomepage(): string
+    public function getHomepage()
     {
         return $this->homepage;
     }
@@ -220,7 +220,7 @@ class Project
     /**
      * @return string
      */
-    public function getUrl(): string
+    public function getUrl()
     {
         return $this->url;
     }
@@ -228,7 +228,7 @@ class Project
     /**
      * @return string
      */
-    public function getSshUrl(): string
+    public function getSshUrl()
     {
         return $this->ssh_url;
     }
@@ -236,7 +236,7 @@ class Project
     /**
      * @return string
      */
-    public function getHttpUrl(): string
+    public function getHttpUrl()
     {
         return $this->http_url;
     }

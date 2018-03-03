@@ -6,9 +6,6 @@
 
 namespace TimoReymann\GitlabWebhookLibrary\Event;
 
-
-use TimoReymann\GitlabWebhookLibrary\Entity\Changes;
-use TimoReymann\GitlabWebhookLibrary\Entity\Label;
 use TimoReymann\GitlabWebhookLibrary\Entity\User;
 use TimoReymann\GitlabWebhookLibrary\Specification\Event;
 

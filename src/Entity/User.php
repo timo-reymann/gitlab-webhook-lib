@@ -30,7 +30,7 @@ class User
      * @param string $username
      * @param string $avatar_url
      */
-    public function __construct(?string $name, ?string $username, ?string $avatar_url)
+    public function __construct($name, $username, $avatar_url)
     {
         $this->name = $name;
         $this->username = $username;
@@ -40,7 +40,7 @@ class User
     /**
      * @return string
      */
-    public function getName(): ?string
+    public function getName()
     {
         return $this->name;
     }
@@ -48,7 +48,7 @@ class User
     /**
      * @return string
      */
-    public function getUsername(): ?string
+    public function getUsername()
     {
         return $this->username;
     }
@@ -56,7 +56,7 @@ class User
     /**
      * @return string
      */
-    public function getAvatarUrl(): ?string
+    public function getAvatarUrl()
     {
         return $this->avatar_url;
     }

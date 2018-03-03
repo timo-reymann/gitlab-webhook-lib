@@ -23,8 +23,6 @@ trait AssigneeTrait
     {
         if ($this->assignee == null) {
             $a = $this->getRootAttribute("assignee");
-            var_dump($this->getData());
-            exit;
             $this->assignee = new User(
                 $a['name'],
                 $a['username'],

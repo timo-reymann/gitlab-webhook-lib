@@ -42,7 +42,7 @@ class Wiki
      * @param string $path_with_namespace
      * @param string $default_branch
      */
-    public function __construct(string $web_url, string $git_ssh_url, string $git_http_url, string $path_with_namespace, string $default_branch)
+    public function __construct($web_url, $git_ssh_url, $git_http_url, $path_with_namespace, $default_branch)
     {
         $this->web_url = $web_url;
         $this->git_ssh_url = $git_ssh_url;
@@ -54,7 +54,7 @@ class Wiki
     /**
      * @return string
      */
-    public function getWebUrl(): string
+    public function getWebUrl()
     {
         return $this->web_url;
     }
@@ -62,7 +62,7 @@ class Wiki
     /**
      * @return string
      */
-    public function getGitSshUrl(): string
+    public function getGitSshUrl()
     {
         return $this->git_ssh_url;
     }
@@ -70,7 +70,7 @@ class Wiki
     /**
      * @return string
      */
-    public function getGitHttpUrl(): string
+    public function getGitHttpUrl()
     {
         return $this->git_http_url;
     }
@@ -78,7 +78,7 @@ class Wiki
     /**
      * @return string
      */
-    public function getPathWithNamespace(): string
+    public function getPathWithNamespace()
     {
         return $this->path_with_namespace;
     }
@@ -86,7 +86,7 @@ class Wiki
     /**
      * @return string
      */
-    public function getDefaultBranch(): string
+    public function getDefaultBranch()
     {
         return $this->default_branch;
     }

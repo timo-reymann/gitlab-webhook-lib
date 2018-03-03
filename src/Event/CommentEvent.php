@@ -7,8 +7,6 @@
 namespace TimoReymann\GitlabWebhookLibrary\Event;
 
 
-use TimoReymann\GitlabWebhookLibrary\Entity\Author;
-use TimoReymann\GitlabWebhookLibrary\Entity\Commit;
 use TimoReymann\GitlabWebhookLibrary\Specification\Event;
 
 class CommentEvent extends Event

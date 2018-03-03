@@ -82,7 +82,7 @@ class Build
      * @param null|string $runner
      * @param $artifacts_file
      */
-    public function __construct(int $id, string $stage, string $name, string $status, string $created_at, string $started_at, ?string $finished_at, string $when, bool $manual, User $user, $runner, $artifacts_file)
+    public function __construct($id, $stage, $name, $status, $created_at, $started_at, $finished_at, $when, $manual, $user, $runner, $artifacts_file)
     {
         $this->id = $id;
         $this->stage = $stage;
@@ -101,7 +101,7 @@ class Build
     /**
      * @return int
      */
-    public function getId(): int
+    public function getId()
     {
         return $this->id;
     }
@@ -109,7 +109,7 @@ class Build
     /**
      * @return string
      */
-    public function getStage(): string
+    public function getStage()
     {
         return $this->stage;
     }
@@ -117,7 +117,7 @@ class Build
     /**
      * @return string
      */
-    public function getName(): string
+    public function getName()
     {
         return $this->name;
     }
@@ -125,7 +125,7 @@ class Build
     /**
      * @return string
      */
-    public function getStatus(): string
+    public function getStatus()
     {
         return $this->status;
     }
@@ -133,7 +133,7 @@ class Build
     /**
      * @return string
      */
-    public function getCreatedAt(): string
+    public function getCreatedAt()
     {
         return $this->created_at;
     }
@@ -141,7 +141,7 @@ class Build
     /**
      * @return string
      */
-    public function getStartedAt(): string
+    public function getStartedAt()
     {
         return $this->started_at;
     }
@@ -149,7 +149,7 @@ class Build
     /**
      * @return null|string
      */
-    public function getFinishedAt(): ?string
+    public function getFinishedAt()
     {
         return $this->finished_at;
     }
@@ -157,7 +157,7 @@ class Build
     /**
      * @return string
      */
-    public function getWhen(): string
+    public function getWhen()
     {
         return $this->when;
     }
@@ -165,7 +165,7 @@ class Build
     /**
      * @return bool
      */
-    public function isManual(): bool
+    public function isManual()
     {
         return $this->manual;
     }
@@ -173,7 +173,7 @@ class Build
     /**
      * @return User
      */
-    public function getUser(): User
+    public function getUser()
     {
         return $this->user;
     }
@@ -181,7 +181,7 @@ class Build
     /**
      * @return null|string
      */
-    public function getRunner(): ?string
+    public function getRunner()
     {
         return $this->runner;
     }

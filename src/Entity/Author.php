@@ -24,7 +24,7 @@ class Author
      * @param string $name
      * @param string $email
      */
-    public function __construct(string $name, string $email)
+    public function __construct($name, $email)
     {
         $this->name = $name;
         $this->email = $email;
@@ -34,7 +34,7 @@ class Author
     /**
      * @return string
      */
-    public function getName(): string
+    public function getName()
     {
         return $this->name;
     }
@@ -42,7 +42,7 @@ class Author
     /**
      * @return string
      */
-    public function getEmail(): string
+    public function getEmail()
     {
         return $this->email;
     }

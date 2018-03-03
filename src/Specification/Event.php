@@ -27,7 +27,7 @@ abstract class Event
      */
     private $project = null;
 
-    public function __construct(array $data)
+    public function __construct($data)
     {
         $this->data = $data;
     }
@@ -35,7 +35,7 @@ abstract class Event
     /**
      * @return array
      */
-    protected function getData(): array
+    protected function getData()
     {
         return $this->data;
     }
@@ -66,7 +66,7 @@ abstract class Event
             $data = $this->data["repository"];
             $this->repository = new Repository(
                 $data['name'],
-                $data['url'],
+                array_key_exists('url', $data) ? $data['url'] : null,
                 $data['description'],
                 $data['homepage'],
                 $data['git_http_url'],

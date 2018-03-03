@@ -72,7 +72,7 @@ class Label
      * @param string $type
      * @param int $groupId
      */
-    public function __construct(int $id, string $title, string $color, string $projectId, string $createdAt, string $updatedAt, bool $template, string $description, string $type, int $groupId)
+    public function __construct($id, $title, $color, $projectId, $createdAt, $updatedAt, $template, $description, $type, $groupId)
     {
         $this->id = $id;
         $this->title = $title;
@@ -97,7 +97,7 @@ class Label
     /**
      * @return string
      */
-    public function getTitle(): string
+    public function getTitle()
     {
         return $this->title;
     }
@@ -105,7 +105,7 @@ class Label
     /**
      * @return string
      */
-    public function getColor(): string
+    public function getColor()
     {
         return $this->color;
     }
@@ -113,7 +113,7 @@ class Label
     /**
      * @return string
      */
-    public function getProjectId(): string
+    public function getProjectId()
     {
         return $this->projectId;
     }
@@ -121,7 +121,7 @@ class Label
     /**
      * @return string
      */
-    public function getCreatedAt(): string
+    public function getCreatedAt()
     {
         return $this->createdAt;
     }
@@ -129,7 +129,7 @@ class Label
     /**
      * @return string
      */
-    public function getUpdatedAt(): string
+    public function getUpdatedAt()
     {
         return $this->updatedAt;
     }
@@ -137,7 +137,7 @@ class Label
     /**
      * @return bool
      */
-    public function isTemplate(): bool
+    public function isTemplate()
     {
         return $this->template;
     }
@@ -145,7 +145,7 @@ class Label
     /**
      * @return string
      */
-    public function getDescription(): string
+    public function getDescription()
     {
         return $this->description;
     }
@@ -153,7 +153,7 @@ class Label
     /**
      * @return string
      */
-    public function getType(): string
+    public function getType()
     {
         return $this->type;
     }
@@ -161,7 +161,7 @@ class Label
     /**
      * @return int
      */
-    public function getGroupId(): int
+    public function getGroupId()
     {
         return $this->groupId;
     }

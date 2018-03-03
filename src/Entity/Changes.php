@@ -36,7 +36,7 @@ class Changes
      * @param Label[] $previousLabels
      * @param Label[] $currentLabels
      */
-    public function __construct(array $updatedById, array $updatedAt, array $previousLabels, array $currentLabels)
+    public function __construct($updatedById, $updatedAt, $previousLabels, $currentLabels)
     {
         $this->updatedById = $updatedById;
         $this->updatedAt = $updatedAt;
@@ -47,7 +47,7 @@ class Changes
     /**
      * @return int[]
      */
-    public function getUpdatedById(): array
+    public function getUpdatedById()
     {
         return $this->updatedById;
     }
@@ -55,7 +55,7 @@ class Changes
     /**
      * @param int[] $updatedById
      */
-    public function setUpdatedById(array $updatedById): void
+    public function setUpdatedById($updatedById)
     {
         $this->updatedById = $updatedById;
     }
@@ -63,7 +63,7 @@ class Changes
     /**
      * @return string[]
      */
-    public function getUpdatedAt(): array
+    public function getUpdatedAt()
     {
         return $this->updatedAt;
     }
@@ -71,7 +71,7 @@ class Changes
     /**
      * @param string[] $updatedAt
      */
-    public function setUpdatedAt(array $updatedAt): void
+    public function setUpdatedAt($updatedAt)
     {
         $this->updatedAt = $updatedAt;
     }
@@ -79,7 +79,7 @@ class Changes
     /**
      * @return Label[]
      */
-    public function getPreviousLabels(): array
+    public function getPreviousLabels()
     {
         return $this->previousLabels;
     }
@@ -87,7 +87,7 @@ class Changes
     /**
      * @param Label[] $previousLabels
      */
-    public function setPreviousLabels(array $previousLabels): void
+    public function setPreviousLabels($previousLabels)
     {
         $this->previousLabels = $previousLabels;
     }
@@ -95,7 +95,7 @@ class Changes
     /**
      * @return Label[]
      */
-    public function getCurrentLabels(): array
+    public function getCurrentLabels()
     {
         return $this->currentLabels;
     }
@@ -103,7 +103,7 @@ class Changes
     /**
      * @param Label[] $currentLabels
      */
-    public function setCurrentLabels(array $currentLabels): void
+    public function setCurrentLabels($currentLabels)
     {
         $this->currentLabels = $currentLabels;
     }
