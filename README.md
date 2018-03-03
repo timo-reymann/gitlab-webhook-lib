@@ -5,6 +5,12 @@ GitLab Webhook Library
 Simple library for PHP to work with Gitlab webhooks in a easy and natural way
 
 # Usage
+## Installation
+
+Install using composer: ``composer require timo-reymann/gitlab-webhook-lib``
+
+## Coding
+
 First create a webhook object and pass your secret token
 
 ```php
@@ -26,7 +32,3 @@ is based on the gitlab event type passed via header.
 ```php 
 $hook->getResult()
 ```
-
-# CAUTION
-This package is currently under heavy development and may change at any time! 
-I will release this package to packagist in the future.
