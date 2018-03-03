@@ -24,7 +24,7 @@ cached after you first call them. So you don't have hidden performance bottlenec
 is based on the gitlab event type passed via header.
 
 ```php 
-$hook->parse();
+$hook->getResult()
 ```
 
 # CAUTION
