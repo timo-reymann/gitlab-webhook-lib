@@ -1,20 +1,25 @@
 GitLab Webhook Library
 ===
 
-# What is this?
+## What is this?
 Simple library for PHP to work with Gitlab webhooks in a easy and natural way
 
-# Usage
-## Installation
+## Usage
+### Installation
 
 Install using composer: ``composer require timo-reymann/gitlab-webhook-lib``
 
-## Coding
+### Documentation
+For PHP class documentation please visit [timo-reymann.github.io/gitlab-webhook-lib](https://timo-reymann.github.io/gitlab-webhook-lib/TimoReymann/GitlabWebhookLibrary.html)
+
+### Use in your scripts
 
 First create a webhook object and pass your secret token
 
 ```php
-$hook = new \TimoReymann\GitlabWebhookLibrary\Core\Webhook(new \TimoReymann\GitlabWebhookLibrary\Token\SecretToken('mySuperSecretToken'));
+$hook = new \TimoReymann\GitlabWebhookLibrary\Core\Webhook(
+  new \TimoReymann\GitlabWebhookLibrary\Token\SecretToken('mySuperSecretToken')
+);
 
 ```
 
