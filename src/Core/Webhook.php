@@ -23,7 +23,7 @@ class Webhook
     private $eventType = null;
 
     /**
-     * @var null|\TimoReymann\GitlabWebhookLibrary\Event\BuildEvent|\TimoReymann\GitlabWebhookLibrary\Event\CommentEvent|\TimoReymann\GitlabWebhookLibrary\Event\IssueEvent|\TimoReymann\GitlabWebhookLibrary\Event\MergeRequestEvent|\TimoReymann\GitlabWebhookLibrary\Event\PipelineEvent|\TimoReymann\GitlabWebhookLibrary\Event\PushEvent|\TimoReymann\GitlabWebhookLibrary\Event\TagEvent|\TimoReymann\GitlabWebhookLibrary\Event\WikiEvent
+     * @var null|\TimoReymann\GitlabWebhookLibrary\Event\JobEvent|\TimoReymann\GitlabWebhookLibrary\Event\BuildEvent|\TimoReymann\GitlabWebhookLibrary\Event\CommentEvent|\TimoReymann\GitlabWebhookLibrary\Event\IssueEvent|\TimoReymann\GitlabWebhookLibrary\Event\MergeRequestEvent|\TimoReymann\GitlabWebhookLibrary\Event\PipelineEvent|\TimoReymann\GitlabWebhookLibrary\Event\PushEvent|\TimoReymann\GitlabWebhookLibrary\Event\TagEvent|\TimoReymann\GitlabWebhookLibrary\Event\WikiEvent
      */
     private $result = null;
 
@@ -39,7 +39,7 @@ class Webhook
 
     /**
      * @param null $inputContent JSON input to read
-     * @return \TimoReymann\GitlabWebhookLibrary\Event\BuildEvent|\TimoReymann\GitlabWebhookLibrary\Event\CommentEvent|\TimoReymann\GitlabWebhookLibrary\Event\IssueEvent|\TimoReymann\GitlabWebhookLibrary\Event\MergeRequestEvent|\TimoReymann\GitlabWebhookLibrary\Event\PipelineEvent|\TimoReymann\GitlabWebhookLibrary\Event\PushEvent|\TimoReymann\GitlabWebhookLibrary\Event\TagEvent|\TimoReymann\GitlabWebhookLibrary\Event\WikiEvent
+     * @return \TimoReymann\GitlabWebhookLibrary\Event\JobEvent|\TimoReymann\GitlabWebhookLibrary\Event\BuildEvent|\TimoReymann\GitlabWebhookLibrary\Event\CommentEvent|\TimoReymann\GitlabWebhookLibrary\Event\IssueEvent|\TimoReymann\GitlabWebhookLibrary\Event\MergeRequestEvent|\TimoReymann\GitlabWebhookLibrary\Event\PipelineEvent|\TimoReymann\GitlabWebhookLibrary\Event\PushEvent|\TimoReymann\GitlabWebhookLibrary\Event\TagEvent|\TimoReymann\GitlabWebhookLibrary\Event\WikiEvent
      * @throws \TimoReymann\GitlabWebhookLibrary\Event\EventTypeInvalidException
      * @throws \TimoReymann\GitlabWebhookLibrary\Event\EventTypeMissingException
      * @throws \TimoReymann\GitlabWebhookLibrary\Token\SecretTokenInvalidException
@@ -54,7 +54,7 @@ class Webhook
     }
 
     /**
-     * @return null|\TimoReymann\GitlabWebhookLibrary\Event\BuildEvent|\TimoReymann\GitlabWebhookLibrary\Event\CommentEvent|\TimoReymann\GitlabWebhookLibrary\Event\IssueEvent|\TimoReymann\GitlabWebhookLibrary\Event\MergeRequestEvent|\TimoReymann\GitlabWebhookLibrary\Event\PipelineEvent|\TimoReymann\GitlabWebhookLibrary\Event\PushEvent|\TimoReymann\GitlabWebhookLibrary\Event\TagEvent|\TimoReymann\GitlabWebhookLibrary\Event\WikiEvent
+     * @return null|\TimoReymann\GitlabWebhookLibrary\Event\JobEvent|\TimoReymann\GitlabWebhookLibrary\Event\BuildEvent|\TimoReymann\GitlabWebhookLibrary\Event\CommentEvent|\TimoReymann\GitlabWebhookLibrary\Event\IssueEvent|\TimoReymann\GitlabWebhookLibrary\Event\MergeRequestEvent|\TimoReymann\GitlabWebhookLibrary\Event\PipelineEvent|\TimoReymann\GitlabWebhookLibrary\Event\PushEvent|\TimoReymann\GitlabWebhookLibrary\Event\TagEvent|\TimoReymann\GitlabWebhookLibrary\Event\WikiEvent
      */
     public function getResult()
     {

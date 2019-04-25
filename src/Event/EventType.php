@@ -20,6 +20,7 @@ class EventType implements HeaderProcessor
     const WIKI_VALUE = "Wiki Page Hook";
     const PIPELINE_VALUE = "Pipeline Hook";
     const BUILD_VALUE = "Build Hook";
+    const JOB_VALUE = "Job Hook";
 
     /**
      * Verify header
@@ -42,7 +43,7 @@ class EventType implements HeaderProcessor
 
     /**
      * @param $inputContent
-     * @return BuildEvent|CommentEvent|IssueEvent|MergeRequestEvent|PipelineEvent|PushEvent|TagEvent|WikiEvent
+     * @return JobEvent|BuildEvent|CommentEvent|IssueEvent|MergeRequestEvent|PipelineEvent|PushEvent|TagEvent|WikiEvent
      * @throws EventTypeInvalidException
      */
     public function getEventDataFromBody($inputContent)
@@ -81,6 +82,10 @@ class EventType implements HeaderProcessor
 
             case self::BUILD_VALUE:
                 return new BuildEvent($data);
+                break;
+
+            case self::JOB_VALUE:
+                return new JobEvent($data);
                 break;
 
             default:
