@@ -1,15 +1,57 @@
 <?php
 
-class JobEventTest extends \PHPUnit_Framework_TestCase
+class JobEventTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var \TimoReymann\GitlabWebhookLibrary\Event\JobEvent
      */
     private $jobEvent;
 
-    public function setUp()
+    public function setUp(): void
     {
-        $this->jobEvent= new \TimoReymann\GitlabWebhookLibrary\Event\JobEvent(json_decode(file_get_contents("./test/json/job_event.json"), true));
+        $this->jobEvent = new \TimoReymann\GitlabWebhookLibrary\Event\JobEvent(json_decode('
+        {
+          "object_kind": "job",
+          "ref": "gitlab-script-trigger",
+          "tag": false,
+          "before_sha": "2293ada6b400935a1378653304eaf6221e0fdb8f",
+          "sha": "2293ada6b400935a1378653304eaf6221e0fdb8f",
+          "job_id": 1977,
+          "job_name": "test",
+          "job_stage": "test",
+          "job_status": "created",
+          "job_started_at": null,
+          "job_finished_at": null,
+          "job_duration": null,
+          "job_allow_failure": false,
+          "project_id": 380,
+          "project_name": "gitlab-org/gitlab-test",
+          "user": {
+            "id": 3,
+            "name": "User",
+            "email": "user@gitlab.com"
+          },
+          "commit": {
+            "id": 2366,
+            "sha": "2293ada6b400935a1378653304eaf6221e0fdb8f",
+            "message": "test\n",
+            "author_name": "User",
+            "author_email": "user@gitlab.com",
+            "status": "created",
+            "duration": null,
+            "started_at": null,
+            "finished_at": null
+          },
+          "repository": {
+            "name": "gitlab_test",
+            "git_ssh_url": "git@192.168.64.1:gitlab-org/gitlab-test.git",
+            "description": "Atque in sunt eos similique dolores voluptatem.",
+            "homepage": "http://192.168.64.1:3005/gitlab-org/gitlab-test",
+            "git_http_url": "http://192.168.64.1:3005/gitlab-org/gitlab-test.git",
+            "visibility_level": 20
+          }
+        }
+        ', true));
     }
 
     public function testGitPropertyMapping()

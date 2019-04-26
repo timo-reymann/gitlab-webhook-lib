@@ -1,3 +1,4 @@
 vendor
 .idea
 docs_cache
+.phpunit.result.cache
