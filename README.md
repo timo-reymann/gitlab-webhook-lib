@@ -1,6 +1,9 @@
 GitLab Webhook Library
 ===
 
+![Build Status](https://api.travis-ci.org/timo-reymann/gitlab-webhook-lib.svg?branch=master)
+![Version](https://poser.pugx.org/timo-reymann/gitlab-webhook-lib/v/stable)
+
 ## What is this?
 Simple library for PHP to work with Gitlab webhooks in a easy and natural way
 
