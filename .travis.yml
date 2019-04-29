@@ -1,0 +1,16 @@
+language: php
+php:
+  - "7.2"
+  - "7.3"
+
+before_script: composer install
+script: vendor/bin/phpunit --configuration test/phpunit.xml test/
+
+before_deploy: php sami.phar update samiConfig.php
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  keep_history: true
+  on:
+    branch: master
